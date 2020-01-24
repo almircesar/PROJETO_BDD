@@ -23,7 +23,7 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
     Given I want open the website
-    And clicar em user
+    And click in user
     When I click in register
     And register
     Then validate the record

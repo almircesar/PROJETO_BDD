@@ -13,7 +13,7 @@ public class Steps {
 	    throw new PendingException();
 	}
 
-	@Given("^clicar em user$")
+	@Given("^click in user$")
 	public void clicar_em_user() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
