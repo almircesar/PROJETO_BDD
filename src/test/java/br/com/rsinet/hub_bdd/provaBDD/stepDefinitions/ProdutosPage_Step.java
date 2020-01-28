@@ -32,6 +32,9 @@ public class ProdutosPage_Step {
 	public void pesquisa_concluida() {
 		produtosPage.ClicaNoNotePosPesquisa();
 	}
+	@Then("^pesquisa invalida")
+	public void pesquisa_invalida() {
+		produtosPage.ProdutoInexistentePosPesquisa();
 	
-	
+}
 }

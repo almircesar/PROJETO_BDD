@@ -1,7 +1,6 @@
 package br.com.rsinet.hub_bdd.provaBDD.PageObject;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +34,9 @@ public class Produtos_Page {
 	@FindBy(how = How.LINK_TEXT,using= "HP Pavilion 15t Touch Laptop")
 	private WebElement NoteDaPesquisa;
 
+	@FindBy(how = How.XPATH, using= "//*[@id=\"searchPage\"]/div[3]/div/label/span")
+	private WebElement ProdutoInexistente;
+	
 	public void clicarProduto() {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", escolherProduto);
@@ -44,6 +46,12 @@ public class Produtos_Page {
 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", NoteDaPesquisa);
+	
+}
+	public void  ProdutoInexistentePosPesquisa() {
+
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", ProdutoInexistente);
 	
 }
 }

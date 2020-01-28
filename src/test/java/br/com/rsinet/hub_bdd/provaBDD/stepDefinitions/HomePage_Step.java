@@ -52,6 +52,13 @@ public class HomePage_Step {
 		
 	    
 	}
+	@When("^procurando produto invalido$")
+	public void procurando_produto_invalido()  {
+		homePage.clica_lupa();
+		homePage.digita_na_Lupa();
+		homePage.digitaProdutoErrado();
+		homePage.digita_na_Lupa();
+		
 
-
+}
 }

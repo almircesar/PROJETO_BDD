@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.resinet.hub_bdd.provaBDD.DataProviders.ConfigFileReader;
 import br.com.rsinet.hub_bdd.provaBDD.Managers.FileReaderManager;
@@ -91,5 +93,10 @@ public class Home_Page {
 	public void digitaProdutoErrado() {
 		DigitaNaLupa.sendKeys("Cadeira Gamer");
 		
+	}
+	
+	public void waitElement() {
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOf(HeadPhones));
 	}
 }
