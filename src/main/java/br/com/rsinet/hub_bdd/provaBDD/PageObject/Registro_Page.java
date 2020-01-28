@@ -24,7 +24,7 @@ public class Registro_Page {
 	@FindBy(how = How.NAME, using = "passwordRegisterPage")
 	private WebElement txtbx_Senha;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/div[1]/div[2]/sec-view[2]/div/input")
+	@FindBy(how = How.NAME, using = "confirm_passwordRegisterPage")
 	private WebElement txtbx_ConfimaSenha;
 
 	@FindBy(how = How.NAME, using = "first_nameRegisterPage")
@@ -33,25 +33,25 @@ public class Registro_Page {
 	@FindBy(how = How.NAME, using = "last_nameRegisterPage")
 	private WebElement txtbx_ultimoNome;
 
-	@FindBy(how = How.XPATH, using = "\"//*[@id=\\\"formCover\\\"]/div[2]/div[2]/sec-view/div/input\"")
+	@FindBy(how = How.NAME, using = "phone_numberRegisterPage")
 	private WebElement txtbx_NumeroDeTelefone;
 
 	@FindBy(how = How.NAME, using = "countryListboxRegisterPage")
 	private WebElement SelecionePais;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/sec-view/div/input")
+	@FindBy(how = How.NAME, using = "i_agree")
 	private WebElement btn_AceitaCondições;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/div[3]/div[1]/sec-view[2]/div/input")
+	@FindBy(how = How.NAME, using = "cityRegisterPage")
 	private WebElement txtbx_Cidade;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/div[3]/div[2]/sec-view[1]/div/input")
+	@FindBy(how = How.NAME, using = "addressRegisterPage")
 	private WebElement txtbx_Endereço;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/div[3]/div[2]/sec-view[2]/div/input")
+	@FindBy(how = How.NAME, using = "state_/_province_/_regionRegisterPage")
 	private WebElement txtbx_Estado;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\\\"formCover\\\"]/div[3]/div[3]/sec-view/div/input")
+	@FindBy(how = How.NAME, using = "postal_codeRegisterPage")
 	private WebElement txtbx_CodPostal;
 
 	@FindBy(how = How.ID, using = "register_btnundefined")

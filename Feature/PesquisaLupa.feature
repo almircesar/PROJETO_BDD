@@ -21,20 +21,15 @@ Feature: Title of your feature
   I want to use this template for my feature file
 
   @tag1
-  Scenario: Title of your scenario
-    Given I want open the website
-    And click in user
-    When I click in register
-    And register
-    Then validate the record
+  Scenario: Pesquisa Lupa funcionando
+    Given Usuario esta na home
+    When Procurando produto especifico
+    Then pesquisa concluida
+
 
   @tag2
   Scenario Outline: Title of your scenario outline
-    Given I want open the website
-    When Registration with surplus user
-    Then I stay on the same page
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+    Given Usuario esta na home
+    When procurando produto invalido
+    Then pesquisa invalida
+    

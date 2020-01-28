@@ -3,7 +3,7 @@ package br.com.rsinet.hub_bdd.provaBDD.Managers;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_bdd.provaBDD.PageObject.Home_Page;
-import br.com.rsinet.hub_bdd.provaBDD.PageObject.SelectProduct_Page;
+import br.com.rsinet.hub_bdd.provaBDD.PageObject.Produtos_Page;
 import br.com.rsinet.hub_bdd.provaBDD.PageObject.Registro_Page;
 
 public class PageObject_Managers {
@@ -13,10 +13,10 @@ public class PageObject_Managers {
 	private Home_Page homePage;
 
 	private Registro_Page registerPage;
-	
-	private SelectProduct_Page productPage;
 
-	public PageObject_Managers (WebDriver driver) {
+	private Produtos_Page productPage;
+
+	public PageObject_Managers(WebDriver driver) {
 
 		this.driver = driver;
 
@@ -33,10 +33,11 @@ public class PageObject_Managers {
 		return (registerPage == null) ? registerPage = new Registro_Page(driver) : registerPage;
 
 	}
-	
-	public SelectProduct_Page getProductPage() {
 
-		return (productPage == null) ? productPage = new SelectProduct_Page(driver) : productPage;
+	public Produtos_Page getProductPage() {
+
+		return (productPage == null) ? productPage = new Produtos_Page(driver) : productPage;
 
 	}
+
 }
