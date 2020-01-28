@@ -41,17 +41,23 @@ public class Home_Page {
 
 	@FindBy(how = How.ID, using = "headphonesImg")
 	private WebElement HeadPhones;
-	
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"details_10\"]")
 	private WebElement ProdutoQueVaiParaOErrado;
-	
-	@FindBy(how = How.ID, using="menuSearch")
+
+	@FindBy(how = How.ID, using = "menuSearch")
 	private WebElement ClicaNaLupa;
-	
-	@FindBy(how = How.ID,using = "autoComplete")
+
+	@FindBy(how = How.ID, using = "autoComplete")
 	private WebElement DigitaNaLupa;
-	
-	
+
+	@FindBy(how = How.NAME, using = "save_to_cart")
+	private WebElement salvarNoCarrinhoLinkText;
+
+	public void WaitCarrinhoLinkText() {
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOf(salvarNoCarrinhoLinkText));
+	}
 
 	public void navigateTo_HomePage() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
@@ -71,31 +77,32 @@ public class Home_Page {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", HeadPhones);
 	}
-	
+
 	public void clica_no_produto_errado() {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", ProdutoQueVaiParaOErrado);
 	}
+
 	public void clica_lupa() {
 		ClicaNaLupa.click();
-}
-	
-	public void digita_na_Lupa() {
-		DigitaNaLupa.sendKeys(Keys.ENTER);
-		
 	}
-	
+
+	public void EnterPesquisa() {
+		DigitaNaLupa.sendKeys(Keys.ENTER);
+
+	}
+
 	public void digitaProdutoEspecifico() {
 		DigitaNaLupa.sendKeys("Beats Studio 2 Over-Ear Matte Black Headphones");
-		
+
 	}
-	
+
 	public void digitaProdutoErrado() {
 		DigitaNaLupa.sendKeys("Cadeira Gamer");
-		
+
 	}
-	
-	public void waitElement() {
+
+	public void waitElementHeadphone() {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOf(HeadPhones));
 	}

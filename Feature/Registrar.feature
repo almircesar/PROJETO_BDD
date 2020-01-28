@@ -1,6 +1,5 @@
 
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Registro no site
 
 
   Scenario: Registrar com sucesso

@@ -6,7 +6,6 @@ import br.com.resinet.hub_bdd.provaBDD.cucumber.TestContext;
 import br.com.rsinet.hub_bdd.provaBDD.PageObject.Home_Page;
 import br.com.rsinet.hub_bdd.provaBDD.PageObject.Produtos_Page;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class HomePage_Step {
@@ -43,21 +42,24 @@ public class HomePage_Step {
 	@When("^clica em um produto invalido da home$")
 	public void clica_em_um_produto_invalido_da_home() throws Throwable {
 		homePage.clica_no_produto_errado();
+		homePage.WaitCarrinhoLinkText();
 	}
 	@When("^Procurando produto especifico$")
 	public void procurando_produto_especifico()  {
 		homePage.clica_lupa();
-		homePage.digita_na_Lupa();
+		homePage.EnterPesquisa();
 		homePage.digitaProdutoEspecifico();
+		homePage.EnterPesquisa();
 		
 	    
 	}
 	@When("^procurando produto invalido$")
 	public void procurando_produto_invalido()  {
 		homePage.clica_lupa();
-		homePage.digita_na_Lupa();
+		homePage.EnterPesquisa();
 		homePage.digitaProdutoErrado();
-		homePage.digita_na_Lupa();
+		homePage.EnterPesquisa();
+		
 		
 
 }

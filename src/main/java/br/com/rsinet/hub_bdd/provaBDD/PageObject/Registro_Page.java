@@ -118,7 +118,7 @@ public class Registro_Page {
 	}
 
 	public void Preencher_DadosPessoais() {
-		enter_NomeUser("Almar");
+		enter_NomeUser("AlmirCesar");
 		enter_Email("Almir_czzzz@hotmail.com");
 		enter_Senha("5frteAA54");
 		enter_ConfSenha("5frteAA54");
@@ -134,7 +134,7 @@ public class Registro_Page {
 	}
 
 	public void fill_PersonalDetailsIncorrectly() {
-		enter_NomeUser("Almaaaaaaaaaaaaaaaaaaaaaaaaaaar4");
+		enter_NomeUser("ALaran");
 		enter_Email("Almir_czzzz@hotmail.com");
 		enter_Senha("5frteAA54");
 		enter_ConfSenha("5frteAA54");
@@ -145,7 +145,7 @@ public class Registro_Page {
 		enter_City("Osasco");
 		enter_Adress("Rua Jamber");
 		enter_Region("São Paulo");
-		enter_PostalCode("06256-132");
+		enter_PostalCode("06256-13244");
 
 	}
 }

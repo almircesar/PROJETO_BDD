@@ -25,15 +25,20 @@ public class ProdutosPage_Step {
 
 	@And("^clica em um produto$")
 	public void clica_em_um_produto() {
+		
 		produtosPage.clicarProduto();
+		produtosPage.WaitCarrinhoLinkText();
 	}
 
 	@Then("^pesquisa concluida$")
 	public void pesquisa_concluida() {
+		
 		produtosPage.ClicaNoNotePosPesquisa();
+		produtosPage.WaitCarrinhoLinkText();
 	}
 	@Then("^pesquisa invalida")
 	public void pesquisa_invalida() {
+		
 		produtosPage.ProdutoInexistentePosPesquisa();
 	
 }
