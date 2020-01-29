@@ -118,7 +118,7 @@ public class Registro_Page {
 	}
 
 	public void Preencher_DadosPessoais() {
-		enter_NomeUser("AlmirCesaN");
+		enter_NomeUser("AlmirDamiao");
 		enter_Email("Almir_czzzz@hotmail.com");
 		enter_Senha("5frteAA54");
 		enter_ConfSenha("5frteAA54");
@@ -134,7 +134,7 @@ public class Registro_Page {
 	}
 
 	public void fill_PersonalDetailsIncorrectly() {
-		enter_NomeUser("ALarIn");
+		enter_NomeUser("Alanad");
 		enter_Email("Almir_czzzz@hotmail.com");
 		enter_Senha("5frteAA54");
 		enter_ConfSenha("5frteAA54");
