@@ -16,7 +16,7 @@ public class HomePage_Step {
 	Produtos_Page produtospage;
 	
 	public HomePage_Step(TestContext context) {
-		this.driver = driver;
+//		this.driver = driver;
 		testContext = context;
 		homePage = testContext.getPageObjectManager().getHome_Page();
 	}
